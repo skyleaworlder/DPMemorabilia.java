@@ -1,5 +1,15 @@
 # Adapter
 
+## 接口转换
+
+为什么叫 `Adapter`？我想大部分原因在于实现多 `interface` 或继承多 `class`。`Adapter` 旨在隐藏 **需要转换的接口**，将其转化 / 暴露为 **目标接口**。
+
+```c++
+class Adapter: public Target, private Source1, private Source2 {};
+```
+
+同时，`Adapter` 相当于是隐藏了 **需要转换的接口**。
+
 ## 专用适配器
 
 因为是要做一个 `interface` / `class` 到另一个的适配，所以肯定是专用的适配器，不存在什么 `Adapter<Target, Source>` 这种吧。
